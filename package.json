@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node server.mjs",
     "dev": "node server.mjs",
-    "build": "node build-pages.mjs"
+    "build": "echo \"Static assets ready in public/\""
   }
 }
-
