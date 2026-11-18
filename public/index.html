@@ -521,22 +521,20 @@ const unlocked = [];
 /* ============ SEED CHECKOUT LINKS ============ */
 /* Checkouts CenterPag do Front-End ($27 / $47 / $77 / $100). */
 const seedLinks = {
-  "27": "https://go.centerpag.com/PPU38CQDJH0",
-  "47": "https://go.centerpag.com/PPU38CQHN3H",
-  "77": "https://go.centerpag.com/PPU38CQHN3I",
-  "87": "https://go.centerpag.com/PPU38CQHN3J",
-  "100": "https://go.centerpag.com/PPU38CQHN3J",
+  "13": "https://go.centerpag.com/PPU38CQDJH0",
+  "25": "https://go.centerpag.com/PPU38CQHN3H",
+  "37": "https://go.centerpag.com/PPU38CQHN3I",
+  "50": "https://go.centerpag.com/PPU38CQHN3J",
 };
 /* ============ WINNERS (temporarily disabled for MundPay approval) ============ */
 const winners = [];
 
 /* each Seed option is an image button */
 const seedImgs = {
-  "27": "/media/thrive/sedd-of-fath-27.jpg",
-  "47": "/media/thrive/seed-of-faith47.jpg",
-  "77": "/media/thrive/seed-of-fath-77.jpg",
-  "87": "/media/thrive/seed-of-faith-100.jpg",
-  "100": "/media/thrive/seed-of-faith-100.jpg",
+  "13": "/media/seed/seed-27.webp",
+  "25": "/media/seed/seed-47.webp",
+  "37": "/media/seed/seed-77.webp",
+  "50": "/media/seed/seed-87.webp",
 };
 
 
@@ -702,7 +700,7 @@ function offerFooterHTML(){
     </footer>`;
 }
 function seedsMarkup(){
-  const amts = ["27","47","77","87"];
+  const amts = ["13","25","37","50"];
   return amts.map(a =>
     '<div class="seed-block">'+
       '<button class="seed seed-card" data-amt="'+a+'"><img src="'+seedImgs[a]+'" alt="Seed of Faith $'+a+'"></button>'+

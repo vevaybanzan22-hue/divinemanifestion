@@ -434,14 +434,14 @@ window.addEventListener("pagehide",scan);document.addEventListener("visibilitych
   /* ============ SEED CHECKOUT LINKS ============ */
   /* Checkouts CenterPag do Front-End ($27 / $47 / $77 / $100). */
   const seedLinks = {
-  "27": "https://go.centerpag.com/PPU38CQDJH0",
-  "47": "https://go.centerpag.com/PPU38CQHN3H",
-  "77": "https://go.centerpag.com/PPU38CQHN3I",
-  "100": "https://go.centerpag.com/PPU38CQHN3J",
+  "13": "https://go.centerpag.com/PPU38CQDJH0",
+  "25": "https://go.centerpag.com/PPU38CQHN3H",
+  "37": "https://go.centerpag.com/PPU38CQHN3I",
+  "50": "https://go.centerpag.com/PPU38CQHN3J",
 };
   /* Seed artwork = the original offer's escalating arts (sprout → tree → golden tree → divine gold), no price printed on them.
      Previous set (our own arts) still lives in /media/thrive/ (sedd-of-fath-27.jpg, seed-of-faith47.jpg, seed-of-fath-77.jpg, seed-of-faith-100.jpg). */
-  const seedImgs = { "27":"/media/seed/seed-27.webp", "47":"/media/seed/seed-47.webp", "77":"/media/seed/seed-77.webp", "100":"/media/seed/seed-87.webp" };
+  const seedImgs = { "13":"/media/seed/seed-27.webp", "25":"/media/seed/seed-47.webp", "37":"/media/seed/seed-77.webp", "50":"/media/seed/seed-87.webp" };
   /* Links diretos (<a href>), igual às páginas da memória: a tag do GTM que põe sck=<indexer> + UTMs no checkout
      só reescreve links <a href> da Hotmart. Com window.location.href o checkout abria sem sck e o webhook
      não achava a visita no Stape Store (IP, UA, fbp, fbc e external_id chegavam undefined). */
@@ -457,7 +457,7 @@ window.addEventListener("pagehide",scan);document.addEventListener("visibilitych
     if (!prefillEmail) return out;
     return out + (out.indexOf('?') === -1 ? '?' : '&') + 'email=' + encodeURIComponent(prefillEmail);
   }
-  $('seeds').innerHTML = ["27","47","77","100"].map(a =>
+  $('seeds').innerHTML = ["13","25","37","50"].map(a =>
     '<div class="seed-block">'+
       '<a id="begin_checkout" class="seed-card" data-amt="'+a+'" href="'+withPrefill(seedLinks[a])+'"><img src="'+seedImgs[a]+'" alt="Seed of Faith - $'+a+'" width="900" height="900" loading="lazy"></a>'+
       '<a id="begin_checkout" class="seed-cta" data-amt="'+a+'" href="'+withPrefill(seedLinks[a])+'">This is the life I choose – $'+a+'</a>'+
