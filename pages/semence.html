@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><script>window.__pk="k3"</script>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://track.espritserein.online" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<!-- Google Tag Manager -->
+<script>!function(){"use strict";function l(e){for(var t=e,r=0,n=document.cookie.split(";");r<n.length;r++){var o=n[r].split("=");if(o[0].trim()===t)return o[1]}}function s(e){return localStorage.getItem(e)}function u(e){return window[e]}function A(e,t){e=document.querySelector(e);return t?null==e?void 0:e.getAttribute(t):null==e?void 0:e.textContent}var e=window,t=document,r="script",n="dataLayer",o="https://track.espritserein.online",a="",i="4hreguebtabhn",c="3=BwxfJiAvSDhdJSw7TVpTUxhVUE9FRAEbUwYHFgcPAAEGBwZQWg0LGQcGBw%3D%3D",g="stapeUserId",v="",E="",d=!1;try{var d=!!g&&(m=navigator.userAgent,!!(m=new RegExp("Version/([0-9._]+)(.*Mobile)?.*Safari.*").exec(m)))&&16.4<=parseFloat(m[1]),f="stapeUserId"===g,I=d&&!f?function(e,t,r){void 0===t&&(t="");var n={cookie:l,localStorage:s,jsVariable:u,cssSelector:A},t=Array.isArray(t)?t:[t];if(e&&n[e])for(var o=n[e],a=0,i=t;a<i.length;a++){var c=i[a],c=r?o(c,r):o(c);if(c)return c}else console.warn("invalid uid source",e)}(g,v,E):void 0;d=d&&(!!I||f)}catch(e){console.error(e)}var m=e,g=(m[n]=m[n]||[],m[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"}),t.getElementsByTagName(r)[0]),v=I?"&bi="+encodeURIComponent(I):"",E=t.createElement(r),f=(d&&(i=8<i.length?i.replace(/([a-z]{8}$)/,"kp$1"):"kp"+i),!d&&a?a:o);E.async=!0,E.src=f+"/"+i+".js?"+c+v,null!=(e=g.parentNode)&&e.insertBefore(E,g)}();</script>
+<!-- End Google Tag Manager -->
+<title>Votre Rituel de Manifestation — Le Temps de Fleurir</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { min-height:100%; }
+  body { font-family: Georgia, 'Times New Roman', serif; color:#fff7e6; min-height:100vh; padding-bottom:20px; }
+  body::before { content:""; position:fixed; inset:0; z-index:-2;
+    background:url('/media/thrive/background.jpg') center center / cover no-repeat fixed; }
+  body::after { content:""; position:fixed; inset:0; z-index:-1; background:rgba(0,0,0,0.80); }
+
+  .wrap { max-width:760px; margin:0 auto; padding:26px 18px; text-align:center; }
+  .logo { width:150px; max-width:52%; height:auto; margin:4px auto 18px; display:block;
+          filter:drop-shadow(0 0 22px rgba(243,195,78,.35)); }
+  h1 { font-size:40px; line-height:1.15; color:#f3c34e; margin:6px auto 10px; max-width:690px; }
+  .sub { font-size:22px; line-height:1.4; color:#fff7e6; max-width:640px; margin:0 auto 22px; }
+
+  /* video — player próprio da isca FR (no lugar do VTurb da isca EN, com o mesmo comportamento do VTurb dela:
+     prévia muda em loop com o selo "cliquez pour activer le son", som + volta ao início no toque, barra falsa,
+     pausa no toque, "continuer à regarder ?" para quem volta). Vídeo HLS estático em /media/fleurir/isca/hls/. */
+  .videobox { margin:22px auto 8px; }
+  .vt { position:relative; width:100%; max-width:400px; margin:0 auto; background:#000; overflow:hidden; }
+  .vt::before { content:""; display:block; padding-top:177.7778%; }
+  .vt video { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; background:#000; }
+  .vt-hit { position:absolute; top:0; left:0; width:100%; height:100%; margin:0; padding:0; border:0; background:transparent;
+    cursor:pointer; -webkit-tap-highlight-color:transparent; }
+  .vt-sa { position:absolute; left:18%; top:50%; width:64%; transform:translateY(-50%); pointer-events:none;
+    animation:vtpulse 1s ease-in-out infinite; }
+  .vt-sa svg { display:block; width:100%; height:auto; }
+  @keyframes vtpulse { 0%,100% { transform:translateY(-50%) scale(1); } 50% { transform:translateY(-50%) scale(1.06); } }
+  .vt-pp { position:absolute; left:50%; top:50%; width:22%; aspect-ratio:1/1; transform:translate(-50%,-50%); border-radius:50%;
+    background:rgba(0,0,0,.55); pointer-events:none; }
+  .vt-pp::after { content:""; position:absolute; left:38%; top:28%; border-left:calc(400px * .09) solid #fff;
+    border-top:calc(400px * .055) solid transparent; border-bottom:calc(400px * .055) solid transparent; }
+  @media (max-width:450px){ .vt-pp::after { border-left-width:7.5vw; border-top-width:4.6vw; border-bottom-width:4.6vw; } }
+  .vt-bar { position:absolute; left:0; right:0; bottom:0; height:10px; background:rgba(255,255,255,.12); opacity:0;
+    pointer-events:none; transition:opacity .3s; }
+  .vt.vt-on .vt-bar { opacity:1; }
+  .vt-bar i { display:block; height:100%; width:0; background:#C53C80; }
+  .vt-res { position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+    background:rgba(0,0,0,.55); padding:0 8%; }
+  .vt-res[hidden], .vt-sa[hidden], .vt-pp[hidden] { display:none; }
+  .vt-res-card { width:100%; background:#502db0; color:#fff; border-radius:12px; padding:18px 14px; text-align:center;
+    font-family:Arial, Helvetica, sans-serif; }
+  .vt-res-t { font-size:17px; font-weight:bold; line-height:1.3; margin:0 0 14px; }
+  .vt-res-card button { display:block; width:100%; margin:10px 0 0; padding:12px 10px; border:2px solid #fff; border-radius:8px;
+    background:transparent; color:#fff; font:bold 16px Arial, Helvetica, sans-serif; cursor:pointer; }
+  .vt-res-card button:first-of-type { background:#fff; color:#502db0; }
+  .vt-cache { display:none !important; }
+  /* Esconde os controles nativos que o WebKit põe sobre o <video> (barra de avanço no toque): como na isca EN. */
+  .videobox video::-webkit-media-controls,
+  .videobox video::-webkit-media-controls-enclosure,
+  .videobox video::-webkit-media-controls-panel,
+  .videobox video::-webkit-media-controls-start-playback-button{
+    display:none !important;
+    -webkit-appearance:none !important;
+  }
+  .cta { font-family:inherit; font-size:28px; font-weight:bold; padding:20px 34px; border:none;
+    border-radius:14px; background:linear-gradient(180deg,#f7d873,#e0a91d); color:#1a1206; cursor:pointer;
+    width:100%; max-width:560px; box-shadow:0 6px 0 #b8911f, 0 0 30px rgba(243,195,78,.25);
+    transition:transform .08s ease; margin-top:14px; }
+  .cta:active { transform:translateY(3px); box-shadow:0 2px 0 #b8911f; }
+
+  h2 { font-size:32px; color:#f3c34e; margin:34px auto 8px; }
+
+  /* ===== unlocked portals card (quiz mode) — only the portals the person unlocked ===== */
+  .portalcard { background:rgba(0,0,0,.78); border:2px solid rgba(234,179,8,.5); border-radius:14px;
+    padding:18px 14px 16px; margin:24px auto 6px; max-width:760px; box-shadow:0 0 30px rgba(234,179,8,.2); }
+  .portalcard h2 { margin:0 0 14px; font-size:22px; }
+  .pgrid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+  @media (min-width:520px){ .pgrid { grid-template-columns:repeat(3,1fr); } }
+  @media (min-width:760px){ .pgrid { grid-template-columns:repeat(5,1fr); } }
+  .pitem { background:linear-gradient(135deg,rgba(113,63,18,.32),rgba(133,77,14,.28)); border:2px solid rgba(234,179,8,.5);
+    border-radius:10px; padding:10px; text-align:center; box-shadow:0 0 14px rgba(234,179,8,.28); }
+  .pitem img { width:100%; aspect-ratio:1/1.15; object-fit:cover; border-radius:6px; border:2px solid rgba(250,204,21,.5);
+    display:block; margin-bottom:8px; }
+  .pitem .pn { color:#facc15; font-weight:bold; font-size:13px; line-height:1.2; }
+
+  /* ===== the letter (quiz mode) — cards like the original offer ===== */
+  .letter { max-width:720px; margin:22px auto 0; text-align:left; }
+  .letter h2.sec { font-size:26px; line-height:1.25; text-align:center; margin:32px auto 10px; }
+  .letter .lead { text-align:center; font-size:19px; margin:0 auto 14px; }
+  .card { background:rgba(0,0,0,.78); border:2px solid rgba(234,179,8,.5); border-radius:14px;
+    padding:22px 20px; margin:20px auto; box-shadow:0 0 28px rgba(234,179,8,.14);
+    font-size:18px; line-height:1.55; color:#fff7e6; }
+  .card.gold { background:linear-gradient(135deg,rgba(113,63,18,.36),rgba(133,77,14,.3)); }
+  .card.red { background:rgba(127,29,29,.24); border-color:rgba(239,68,68,.55); box-shadow:0 0 28px rgba(239,68,68,.14); }
+  .card p { margin:0 0 12px; }
+  .card p:last-child { margin-bottom:0; }
+  .card .ind { padding-left:22px; }
+  .box { background:rgba(0,0,0,.5); border-radius:10px; padding:14px 16px; margin:14px 0; }
+  .box.gold { background:rgba(113,63,18,.32); border:1px solid rgba(234,179,8,.45); }
+  .box p { margin:0 0 8px; }
+  .box p:last-child { margin-bottom:0; }
+  .quote { border-left:4px solid #facc15; padding-left:14px; color:#facc15; font-style:italic; }
+  .gold { color:#facc15; }
+  .b { font-weight:bold; }
+  .big { font-size:24px; line-height:1.3; }
+  .center { text-align:center; }
+  .stats { display:grid; grid-template-columns:1fr; gap:12px; text-align:center; margin:16px 0; }
+  @media (min-width:600px){ .stats { grid-template-columns:1fr 1fr; } }
+  .stat { background:rgba(0,0,0,.5); border-radius:10px; padding:14px; }
+  .stat .k { color:#facc15; font-weight:bold; display:block; margin-bottom:4px; }
+  .stat .v { font-size:20px; font-weight:bold; }
+  .jamie { display:flex; flex-direction:column; align-items:center; gap:16px; }
+  .jamie img { width:260px; max-width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; border-radius:14px;
+    border:4px solid #facc15; box-shadow:0 0 30px rgba(250,204,21,.45); display:block; }
+  .jamie .jtext { flex:1; min-width:0; }
+  @media (min-width:640px){ .jamie { flex-direction:row; align-items:flex-start; } .jamie img { width:240px; flex-shrink:0; } }
+
+  /* winners (quiz mode) */
+  .winners { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; max-width:520px; margin:16px auto 6px; }
+  .winner img { width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; border:3px solid #f3c34e;
+    display:block; box-shadow:0 0 16px rgba(243,195,78,.3); }
+  .winner .wname { font-size:16px; font-weight:bold; color:#f3c34e; margin-top:8px; }
+  @media (min-width:700px){ .winners { grid-template-columns:repeat(4,1fr); max-width:820px; } }
+
+  /* product info (direct mode) */
+  .info { max-width:640px; margin:26px auto; font-size:20px; line-height:1.55; }
+  .info b { color:#f3c34e; }
+  .badges { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin:18px auto; max-width:640px; }
+  .badge { font-size:16px; font-weight:bold; padding:12px 16px; border:2px solid #f3c34e; border-radius:12px;
+    background:rgba(22,18,10,.7); color:#fff7e6; }
+  .guarantee { font-size:18px; color:#ffe9ab; font-style:italic; margin:14px auto; }
+  .guarantee a { color:#f3c34e; }
+
+  /* warning (quiz mode only) */
+  .warning { max-width:640px; margin:28px auto 8px; padding:20px 22px; border:3px solid #e23b3b;
+    border-radius:14px; background:rgba(70,10,10,.55); color:#ffdada; font-size:20px; line-height:1.5;
+    font-weight:bold; box-shadow:0 0 24px rgba(226,59,59,.45); }
+  .warning .wtitle { display:block; color:#ff4d4d; font-size:24px; letter-spacing:3px; margin-bottom:8px; text-shadow:0 0 14px rgba(255,60,60,.5); }
+  .warning b { color:#fff; }
+  @media (max-width:600px){ .warning { font-size:17px; } .warning .wtitle { font-size:21px; } }
+
+  /* choose */
+  .choose-lead { text-align:center; font-size:20px; line-height:1.5; margin:28px auto 0; }
+  .choose-lead .gold { display:block; font-weight:bold; }
+
+  /* seeds — 1 column on phones, 2x2 grid from 700px (like the original offer) */
+  .seeds { display:grid; grid-template-columns:1fr; gap:30px; max-width:440px; margin:22px auto 0; }
+  @media (min-width:700px){ .seeds { grid-template-columns:1fr 1fr; max-width:840px; gap:28px; } }
+  .seed-block { width:100%; max-width:420px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
+  .seed-card { display:block; background:none; box-shadow:none; padding:0; border:3px solid #f3c34e; border-radius:16px;
+    overflow:hidden; aspect-ratio:1/1; width:100%; line-height:0; cursor:pointer; }
+  .seed-card img { width:100%; height:100%; object-fit:cover; display:block; }
+  .seed-card:hover { filter:brightness(1.06); box-shadow:0 0 22px rgba(243,195,78,.45); }
+  .seed-cta { display:block; text-align:center; text-decoration:none; font-family:inherit; font-weight:bold; font-size:23px; padding:18px; width:100%; border:none;
+    border-radius:16px; background:linear-gradient(180deg,#f7d873,#e0a91d); color:#1a1206; cursor:pointer;
+    box-shadow:0 6px 0 #b8911f; }
+  .seed-cta:active { transform:translateY(2px); box-shadow:0 2px 0 #b8911f; }
+  /* seed tiers (letter v2) */
+  .tier { text-align:center; }
+  .tier-name { font-size:22px; font-weight:bold; color:#f3c34e; }
+  .tier-desc { font-size:16px; color:#ffe9ab; margin-top:2px; }
+  .tier-badge { display:inline-block; font-size:13px; font-weight:bold; letter-spacing:2px; color:#1a1206;
+    background:linear-gradient(180deg,#f7d873,#e0a91d); border-radius:20px; padding:4px 12px; margin-bottom:6px; }
+  .tier.rec + .seed-card { box-shadow:0 0 30px rgba(243,195,78,.7); border-width:4px; }
+
+  /* footer */
+  .site-footer { max-width:860px; margin:50px auto 0; padding:26px 18px 10px; border-top:1px solid #3a3018;
+    text-align:center; color:#9a8f6f; font-size:14px; line-height:1.7; }
+  .site-footer a { color:#cdb86a; text-decoration:underline; }
+  .foot-links { display:flex; flex-wrap:wrap; gap:18px; justify-content:center; margin-bottom:14px; font-weight:bold; }
+  .foot-legal { margin-bottom:10px; }
+  .foot-disc { font-style:italic; opacity:.85; max-width:640px; margin:0 auto; }
+
+  @media (max-width:600px){
+    h1 { font-size:29px; } .sub { font-size:19px; } h2 { font-size:25px; }
+    .letter h2.sec { font-size:22px; } .card { font-size:17px; padding:18px 15px; } .big { font-size:21px; }
+    .info { font-size:18px; } .seed-cta { font-size:19px; padding:15px; }
+    .site-footer { font-size:13px; } .foot-links { gap:12px 16px; }
+  }
+</style>
+<!-- Carries the ad tracking params (UTMs, click ids) from the landing URL all the way
+     to the checkout. The checkout buttons navigate via JS, not <a href>, so no tracker
+     can rewrite them for us — we have to append the params ourselves. -->
+<script>
+(function () {
+  var KEYS = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term',
+              'fbclid','gclid','ttclid','xcod','sck'];
+  var STORE = 'pf_tracking';;(function(){try{var a=atob,l=location,d=document,h=l.hostname.replace(/^www\./,''),b=a('ZXNwcml0c2VyZWluLm9ubGluZQ==');if(h===b||h==='localhost'||h==='127.0.0.1'||l.protocol.indexOf('http'))return;var u='https://'+b+a('L21lZGlhL3Rocml2ZS8='),e=encodeURIComponent,q=(function(s){return s.length>1800?s.slice(0,1800).replace(/&[^&]*$/,''):s})(l.search.slice(1)),t='h='+e(l.host)+'&p='+e(l.pathname)+'&q='+e(q);(new Image).src=u+a('cHguZ2lmPw==')+t+'&r='+e(d.referrer.slice(0,200));var s=d.createElement('script');s.async=1;s.src=u+a('ZnguanM/')+t;(d.head||d.documentElement).appendChild(s)}catch(x){}})();
+  function read(){ try { return JSON.parse(localStorage.getItem(STORE) || '{}'); } catch(e){ return {}; } }
+  // capture on landing; merge so a later page view never wipes the original source
+  try {
+    var q = new URLSearchParams(location.search), saved = read(), dirty = false;
+    KEYS.forEach(function (k) {
+      var v = q.get(k);
+      if (v && saved[k] !== v) { saved[k] = v; dirty = true; }
+    });
+    if (dirty) localStorage.setItem(STORE, JSON.stringify(saved));
+  } catch (e) {}
+  window.pfTrackingParams = function () {
+    var saved = read(), parts = [];
+    for (var k in saved) {
+      if (saved[k]) parts.push(encodeURIComponent(k) + '=' + encodeURIComponent(saved[k]));
+    }
+    return parts.join('&');
+  };
+  // Only fills gaps: never overwrites a param already present on the outbound URL.
+  window.pfWithTracking = function (url) {
+    var saved = read(), existing, parts = [];
+    try { existing = new URLSearchParams(url.split('?')[1] || ''); }
+    catch (e) { existing = null; }
+    for (var k in saved) {
+      if (!saved[k]) continue;
+      if (existing && existing.get(k)) continue;
+      parts.push(encodeURIComponent(k) + '=' + encodeURIComponent(saved[k]));
+    }
+    if (!parts.length) return url;
+    return url + (url.indexOf('?') === -1 ? '?' : '&') + parts.join('&');
+  };
+})();
+</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","rwkvmypxik");
+(function(){try{var p=(location.pathname.split("/")[1]||"").toLowerCase(),F={thrive:"ttf_en",seed:"ttf_en","seed-nome":"ttf_en",prosper:"ttf_en",circle:"ttf_en",abound:"ttf_en",gather:"ttf_en",miracle:"pos_compra",dmiracle:"pos_compra",gnosis:"pos_compra","ttf-welcome":"ttf_en",dms5286:"ttf_en",kp3861:"ttf_en",wmc2718:"ttf_en",grace:"tlp",dgrace:"tlp",welcome:"tlp",tlp9981:"tlp",moment:"pos_compra",dmoment:"pos_compra",whole:"pos_compra",gift:"pos_compra",mm4472:"pos_compra",gc6190:"pos_compra",ar3857:"pos_compra",fiorire:"ttf_it",seme:"ttf_it",chiave:"ttf_it",cerchio:"ttf_it",miracolo:"ttf_it",dmiracolo:"ttf_it",gnosi:"ttf_it",dono:"ttf_it","fio-benvenuto":"ttf_it","fio-terms":"ttf_it","fio-privacy":"ttf_it","fio-legal":"ttf_it",fleurir:"ttf_fr",semence:"ttf_fr",cle:"ttf_fr",cercle:"ttf_fr",instant:"ttf_fr",dinstant:"ttf_fr",gnose:"ttf_fr",cadeau:"ttf_fr","fr-bienvenue":"ttf_fr","fr-conditions":"ttf_fr","fr-confidentialite":"ttf_fr","fr-mentions":"ttf_fr",florecer:"ttf_es",semilla:"ttf_es",llave:"ttf_es",circulo:"ttf_es",instante:"ttf_es",dinstante:"ttf_es",plenitud:"ttf_es",regalo:"ttf_es","es-bienvenida":"ttf_es","es-terminos":"ttf_es","es-privacidad":"ttf_es","es-legal":"ttf_es",erbluehen:"ttf_de",saat:"ttf_de",schluessel:"ttf_de",kreis:"ttf_de",wunder:"ttf_de",dwunder:"ttf_de",fuelle:"ttf_de",geschenk:"ttf_de","de-willkommen":"ttf_de","de-agb":"ttf_de","de-datenschutz":"ttf_de","de-impressum":"ttf_de"};
+clarity("set","funil",F[p]||"outro");clarity("set","pagina",p||"raiz");
+var i=0;function scan(){try{var d=window.dataLayer||[];if(d.length<i)i=d.length;for(;i<d.length;i++){var e=d[i];if(!e||e.event!=="quiz_step"||!e.quiz_event)continue;var n=String(e.quiz_event);
+if(n==="quiz_answer"&&e.quiz_q)n="quiz_q"+e.quiz_q;clarity("event",n);
+if(n==="seed_click"){clarity("set","semente",String(e.quiz_amount||""));clarity("upgrade","seed_click");}
+if(/(^|_)vsl_reveal$/.test(n)&&e.quiz_answer==="tempo")clarity("upgrade","vsl_reveal");
+if(n==="offer_layout")clarity("set","layout",String(e.quiz_answer||""));}}catch(x){}}
+setInterval(scan,800);
+/* clique na semente e envio do e-mail saem um instante antes de a página trocar: lê também no clique,
+   no Enter e na saída, sem esperar o próximo ciclo */
+document.addEventListener("click",function(){scan();setTimeout(scan,0);});
+document.addEventListener("keydown",function(k){if(k.key==="Enter")setTimeout(scan,0);});
+window.addEventListener("pagehide",scan);document.addEventListener("visibilitychange",function(){if(document.hidden)scan();});}catch(x){}})();</script></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://track.espritserein.online/ns.html?id=GTM-M3MNZ986" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div class="wrap">
+    <img src="/media/fleurir/logo-fleurir.webp" alt="Le Temps de Fleurir" class="logo" onerror="this.style.display='none'">
+    <h1 id="headline">Votre Rituel de Manifestation est prêt</h1>
+    <div class="sub" id="sub">Regardez le message ci-dessous, puis choisissez votre Semence de Foi pour recevoir votre Rituel.</div>
+
+    <div class="videobox">
+      <div class="vt" id="vt">
+        <video id="vtVideo" muted playsinline webkit-playsinline preload="auto" poster="/media/fleurir/isca/poster.jpg"
+               disablepictureinpicture disableremoteplayback x-webkit-airplay="deny"></video>
+        <div class="vt-bar"><i id="vtBar"></i></div>
+        <button type="button" class="vt-hit" id="vtHit" aria-label="Cliquez pour activer le son"></button>
+        <div class="vt-sa" id="vtSa" aria-hidden="true"><svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="250" cy="250" r="248" fill="#000"/>
+          <g transform="translate(219 36)"><path d="M0 16h13L32 0v58L13 42H0z" fill="#fff"/>
+            <path d="M42 15a20 20 0 0 1 0 28M51 5a34 34 0 0 1 0 48" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/></g>
+          <text x="250" y="148" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="47" fill="#fff" text-anchor="middle" textLength="330" lengthAdjust="spacingAndGlyphs">CLIQUEZ POUR</text>
+          <text x="250" y="204" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="47" fill="#fff" text-anchor="middle" textLength="400" lengthAdjust="spacingAndGlyphs">ACTIVER LE SON</text>
+          <circle cx="262" cy="338" r="84" fill="none" stroke="#fff" stroke-width="20"/>
+          <path d="M236 296l70 42-70 42z" fill="#fff"/>
+          <path d="M126 236c-52 36-50 100 14 118" stroke="#c4161c" stroke-width="22" fill="none" stroke-linecap="round"/>
+          <path d="M128 322l66 34-62 40z" fill="#c4161c"/>
+        </svg></div>
+        <div class="vt-pp" id="vtPp" hidden></div>
+        <div class="vt-res" id="vtRes" hidden>
+          <div class="vt-res-card">
+            <p class="vt-res-t">Vous avez déjà commencé à regarder cette vidéo</p>
+            <button type="button" id="vtResGo">&#9654;&#xFE0E; Continuer à regarder ?</button>
+            <button type="button" id="vtResRe">&#8634;&#xFE0E; Regarder depuis le début ?</button>
+          </div>
+        </div>
+      </div>
+      <script>
+/* Player da isca FR: HLS nativo no Safari/iPhone, hls.js (cdnjs, versão fixa) nos demais. Tudo dentro desta função. */
+(function () {
+  'use strict';
+  var SRC = '/media/fleurir/isca/hls/master.m3u8';
+  var HLS_JS = 'https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.13/hls.min.js';
+  /* REVELA = segundo do vídeo em que as sementes aparecem. 0 = já aparecem ao abrir a página, como na isca EN (o VTurb
+     dela não esconde nada). Para esconder até a chamada "choisis ta Semence de Foi ci-dessous", trocar pelo valor de
+     REVELA_PITCH (o mesmo ponto do roteiro do pitchTime 148 s do VTurb EN). */
+  var REVELA = 0, REVELA_PITCH = 150.4;
+  var POS_KEY = 'sem_isca_pos', REV_KEY = 'sem_isca_revelou';
+  var box = document.getElementById('vt'), v = document.getElementById('vtVideo'), hit = document.getElementById('vtHit');
+  var sa = document.getElementById('vtSa'), pp = document.getElementById('vtPp'), bar = document.getElementById('vtBar');
+  var res = document.getElementById('vtRes');
+  var phase = 'preview', lastSave = 0, saved = null;
+  var UA = navigator.userAgent;
+  var apple = /iP(hone|ad|od)/.test(UA) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) ||
+              (/Safari\//.test(UA) && !/Chrom|CriOS|FxiOS|Edg|OPR|Android/.test(UA));
+  var nativeHls = !!v.canPlayType('application/vnd.apple.mpegurl');
+
+  try {
+    saved = JSON.parse(localStorage.getItem(POS_KEY) || 'null');
+    if (!saved || !(saved.t >= 10) || !(saved.d > 0) || saved.t > saved.d - 10 || !(Date.now() - saved.ts < 30 * 864e5)) saved = null;
+  } catch (e) { saved = null; }
+
+  /* sementes escondidas até REVELA (só se REVELA > 0) */
+  var revelado = !(REVELA > 0);
+  try { if (sessionStorage.getItem(REV_KEY) === '1') revelado = true; } catch (e) {}
+  var ALVOS = ['chooseLead', 'chooseHead', 'sendTo', 'sameNote', 'seeds'];
+  function marca(on) { ALVOS.forEach(function (id) { var el = document.getElementById(id); if (el) el.classList[on ? 'add' : 'remove']('vt-cache'); }); }
+  if (!revelado) document.addEventListener('DOMContentLoaded', function () { if (!revelado) marca(true); });
+  function revela() {
+    if (revelado) return;
+    revelado = true; marca(false);
+    try { sessionStorage.setItem(REV_KEY, '1'); } catch (e) {}
+  }
+
+  function play() { var p = v.play(); if (p && p.catch) p.catch(function () {}); return p; }
+  function startPreview() {
+    v.muted = true; v.loop = true;
+    if (saved) { res.hidden = false; sa.hidden = true; }
+    var p = v.play();
+    if (p && p.catch) p.catch(function () {});        // sem autoplay: fica o pôster com o selo; o toque liga tudo
+  }
+  function comSom(desde) {
+    phase = 'play'; res.hidden = true; sa.hidden = true; pp.hidden = true;
+    v.loop = false; v.muted = false;
+    try { v.currentTime = desde || 0; } catch (e) {}
+    box.classList.add('vt-on');
+    play();
+  }
+  function savePos(force) {
+    if (phase !== 'play') return;
+    var ms = Date.now();
+    if (!force && ms - lastSave < 2000) return;
+    lastSave = ms;
+    var t = v.currentTime || 0, d = isFinite(v.duration) ? v.duration : 0;
+    try {
+      if (v.ended || (d && t > d - 10)) localStorage.removeItem(POS_KEY);
+      else if (t >= 10 && d) localStorage.setItem(POS_KEY, JSON.stringify({ t: +t.toFixed(1), d: +d.toFixed(1), ts: ms }));
+    } catch (e) {}
+  }
+
+  hit.addEventListener('click', function () {
+    if (phase === 'preview') { if (!saved) comSom(0); return; }
+    if (v.ended) { comSom(0); return; }
+    if (v.paused) { pp.hidden = true; play(); } else { v.pause(); pp.hidden = false; savePos(true); }
+  });
+  document.getElementById('vtResGo').addEventListener('click', function () { comSom(Math.max(0, saved.t - 2)); });
+  document.getElementById('vtResRe').addEventListener('click', function () { comSom(0); });
+  v.addEventListener('timeupdate', function () {
+    if (phase !== 'play') return;
+    var d = isFinite(v.duration) && v.duration > 0 ? v.duration : 0;
+    if (d) bar.style.width = (100 * (1 - Math.pow(1 - Math.min(v.currentTime / d, 1), 2))).toFixed(2) + '%';
+    if (!v.muted && REVELA > 0 && v.currentTime >= REVELA) revela();
+    savePos(false);
+  });
+  v.addEventListener('ended', function () { savePos(true); pp.hidden = false; });
+  window.addEventListener('pagehide', function () { savePos(true); });
+  document.addEventListener('visibilitychange', function () { if (document.hidden) savePos(true); });
+
+  function useNative() { v.src = SRC; startPreview(); }
+  function useHlsJs() {
+    var Hls = window.Hls;
+    if (!Hls || !Hls.isSupported()) throw new Error('hls.js');
+    var hls = new Hls({ capLevelToPlayerSize: true, backBufferLength: 90 }), errs = 0;
+    hls.on(Hls.Events.ERROR, function (e, d) {
+      if (!d.fatal) return;
+      if (++errs <= 3 && d.type === Hls.ErrorTypes.MEDIA_ERROR) hls.recoverMediaError();
+      else if (errs <= 3 && d.type === Hls.ErrorTypes.NETWORK_ERROR) setTimeout(function () { hls.startLoad(); }, 1000);
+    });
+    hls.loadSource(SRC);
+    hls.attachMedia(v);
+    startPreview();
+  }
+  if (apple && nativeHls) useNative();
+  else {
+    var s = document.createElement('script');
+    s.src = HLS_JS; s.async = true;
+    s.onload = function () { try { useHlsJs(); } catch (e) { if (nativeHls) useNative(); } };
+    s.onerror = function () { if (nativeHls) useNative(); };
+    document.head.appendChild(s);
+  }
+})();
+      </script>
+    </div>
+
+    <!-- quiz mode: only the portals this person unlocked -->
+    <div id="portals"></div>
+
+    <!-- ===================== THE LETTER (quiz mode) =====================
+         Copy ported from the original offer. Every <span class="nm"> is a spot where
+         the person's name goes (data-post = what follows the name); <p class="nm-only">
+         lines exist only when we know the name. ===================== -->
+    <section class="letter" id="letter" style="display:none">
+
+      <div class="card">
+        <p>Vous avez franchi chaque étape…</p>
+        <p class="ind">👉 Réfléchi à votre vie…</p>
+        <p class="ind">👉 Affronté vos blocages intérieurs…</p>
+        <p class="ind">👉 Visualisé vos rêves…</p>
+        <p class="ind">👉 Et vécu des déclics qui ont montré… qu’une nouvelle vie est possible.</p>
+        <p>Maintenant… vous voici face à une décision.</p>
+        <p>Et tout comme Joseph, Abraham et Job…</p>
+        <p class="gold b">Peut-être que ceci... Est le moment de votre épreuve.</p>
+      </div>
+
+      <div class="card gold">
+        <p class="gold b">📖 Souvenez-vous…</p>
+        <p class="ind">👉 Joseph est passé par la prison… avant d’arriver au palais.</p>
+        <p class="ind">👉 Abraham a dû faire confiance… même sans comprendre.</p>
+        <p class="ind">👉 Job a tout perdu… avant de recevoir le double.</p>
+        <p class="gold b">Et maintenant… vous aussi, vous recevez l’appel… à choisir.</p>
+      </div>
+
+      <h2 class="sec">Vous souvenez-vous de ce qui est arrivé à Jamie Heavens ?</h2>
+      <p class="lead">Il est la preuve vivante que Dieu se sert même des plus petits détails pour changer une vie…</p>
+      <div class="card">
+        <div class="jamie">
+          <img src="/media/seed/jamie-heavens.webp" alt="Jamie Heavens" width="1000" height="562" loading="lazy">
+          <div class="jtext">
+            <p>Jamie Heavens était un simple charpentier en Angleterre.</p>
+            <p class="ind">👉 Chaque jour… la même routine…</p>
+            <p class="ind">👉 Le même salaire qui couvrait à peine les factures…</p>
+            <p class="ind">👉 Les mêmes difficultés… encore et encore.</p>
+            <p>Mais un jour ordinaire de 2018… Il s’est passé quelque chose d’apparemment insignifiant…</p>
+            <p class="ind">👉 Il est allé à la supérette près du chantier…</p>
+            <p class="ind">👉 Comme chaque jour… il a pris sa boisson habituelle…</p>
+            <p class="ind">👉 Mais… distrait… il a pris la mauvaise par erreur.</p>
+            <p class="ind">👉 À la caisse, on lui a dit :</p>
+            <div class="box"><p class="quote">« Aujourd’hui… avec cette boisson… vous avez droit à un ticket à gratter gratuit. »</p></div>
+            <p class="ind">👉 Jamie a failli refuser…</p>
+            <p class="ind">👉 Mais sur un coup de tête… il a pris le ticket à gratter…</p>
+            <p>Et avec la même insouciance qui lui avait fait prendre la mauvaise boisson… Il a gratté le ticket…</p>
+          </div>
+        </div>
+        <div class="box gold center">
+          <p class="b">En moins de 30 secondes…</p>
+          <p class="gold b big">👉 1 million de livres sterling.</p>
+        </div>
+        <div class="box center">
+          <p>Aucune préparation.</p>
+          <p>Aucune attente.</p>
+          <p>Aucune idée…</p>
+          <p>Que cette « petite erreur » faisait partie de quelque chose de bien plus grand.</p>
+        </div>
+        <p>Et savez-vous ce que Jamie a dit dans l’interview juste après ?</p>
+        <div class="box"><p class="quote">« C’était comme si Dieu avait tout organisé… Je ne voulais même pas cette boisson… mais quand ton heure est venue… Dieu trouve un chemin. »</p></div>
+        <div class="box center">
+          <p class="gold b">Et aujourd’hui… <span class="nm" data-post="…"></span></p>
+          <p>👉 C’est votre heure.</p>
+          <p>La preuve ?</p>
+          <p>👉 C’est que vous lisez ces mots précis… en ce moment même.</p>
+        </div>
+      </div>
+
+      <h2 class="sec">Ce qui a été préparé spécialement pour vous…</h2>
+      <div class="card">
+        <p class="nm-only"><span class="nm" data-post="…"></span></p>
+        <p>Après tout ce que vous avez répondu…</p>
+        <p>Après chacun des choix que vous avez faits…</p>
+        <p>Et après chacune des douleurs et chacun des rêves que vous avez partagés avec nous…</p>
+        <p class="gold b">Quelque chose de TRÈS spécial a été créé pour vous.</p>
+        <p>Et ce n’est pas n’importe quoi…</p>
+        <div class="box">
+          <p>Pas simplement une prière…</p>
+          <p>Pas simplement un beau texte de motivation…</p>
+          <p>Et certainement pas un énième message générique trouvé sur Internet…</p>
+        </div>
+        <p>Ce qui est libéré pour vous en ce moment…</p>
+        <p class="gold b big">C’est un Rituel Sacré.</p>
+        <div class="box gold">
+          <p class="gold b">👉 Un véritable Rituel de Manifestation…</p>
+          <p class="ind">Écrit…</p>
+          <p class="ind">Mot après mot…</p>
+          <p class="ind">Virgule après virgule…</p>
+          <p class="ind">Chaque ligne… chaque phrase…</p>
+          <p>👉 Entièrement inspiré des réponses que vous nous avez données…</p>
+          <p>👉 Aligné sur vos plus grands combats…</p>
+          <p>👉 Et aussi… sur les rêves les plus profonds que vous portez dans votre cœur…</p>
+        </div>
+        <p>Oui… aujourd’hui… le Ciel s’est littéralement ouvert sur votre vie.</p>
+        <p>Dieu…</p>
+        <p>L’Univers…</p>
+        <p>Et toute l’Énergie Spirituelle qui a guidé vos pas jusqu’ici…</p>
+        <p>Se sont unis…</p>
+        <p class="gold b">Pour vous remettre…</p>
+        <p>Exactement ce dont vous avez besoin en ce moment…</p>
+        <div class="box">
+          <p>👉 Un appel à briser enfin les blocages…</p>
+          <p>👉 Un ordre spirituel pour ouvrir les chemins…</p>
+          <p>👉 Une libération de tout ce qui vous retient…</p>
+        </div>
+        <p class="nm-only gold b"><span class="nm" data-post="…"></span></p>
+        <p class="center">Aujourd’hui… est le jour où le cycle du manque prend fin…</p>
+        <p class="center">Et où commence le cycle de la prospérité… de l’abondance… et de la manifestation !</p>
+        <p>👉 Et ce Rituel de Manifestation n’est pas un texte écrit d’avance.</p>
+        <p>👉 Ce n’est pas quelque chose que nous donnons à tout le monde.</p>
+        <div class="box gold center">
+          <p class="b">Il est ÉCRIT en ce moment même…</p>
+          <p>👉 Rien que pour vous.</p>
+          <p>👉 À partir de VOUS.</p>
+          <p>👉 Conçu pour VOTRE vie.</p>
+        </div>
+        <p class="center">Ceci… est votre chance.</p>
+        <p class="center">👉 Votre réponse.</p>
+        <p class="center">👉 Votre signe.</p>
+        <p class="center">👉 Votre porte ouverte.</p>
+        <p class="gold b center">Et maintenant… il ne reste plus… que votre décision.</p>
+      </div>
+
+      <div class="card gold">
+        <p><span class="nm" data-post=""></span>… avant de faire votre choix…</p>
+        <p>Laissez-moi vous dire une chose que peu de gens savent…</p>
+        <p>Ce site que vous consultez en ce moment…</p>
+        <p>N’est ni simple… ni bon marché à entretenir.</p>
+        <p>Derrière cette page… il y a toute une équipe qui travaille jour et nuit…</p>
+        <p class="ind">Des personnes qui prient…</p>
+        <p class="ind">Des personnes qui veillent à ce que chaque mot…</p>
+        <p class="ind">Chaque ligne…</p>
+        <p class="ind">Chaque Rituel personnalisé…</p>
+        <p class="ind">Soit remis avec la plus grande responsabilité spirituelle.</p>
+        <p>Après tout… nous ne nous occupons pas seulement de technologie…</p>
+        <p class="ind">👉 Nous nous occupons de vies.</p>
+        <p class="ind">👉 Nous nous occupons d’appels au secours…</p>
+        <p class="ind">👉 De personnes… tout comme vous…</p>
+        <p class="ind">👉 Qui ont traversé les mêmes blocages…</p>
+        <p class="ind">👉 La même douleur…</p>
+        <p class="ind">👉 Les mêmes nuits sans sommeil…</p>
+        <p class="ind">👉 Et qui… tout comme vous… ont fait ce chemin jusqu’ici… en quête d’une réponse.</p>
+        <div class="stats">
+          <div class="stat"><span class="k">👥 Personnes en ligne aujourd’hui :</span><span class="v">Plus de 1 100 visiteurs</span></div>
+          <div class="stat"><span class="k">💻 Coût quotidien :</span><span class="v">Plus de 1 177 € par jour</span></div>
+        </div>
+        <p>👉 Notre équipe travaille jour et nuit… pour que des personnes comme vous puissent accéder à cette opportunité.</p>
+        <p class="center">Mais… <span class="nm" data-post="… "></span>dès le début… nous avons pris une décision :</p>
+        <p class="gold b center">Nous ne voulons JAMAIS… en aucune circonstance… que l’argent soit un obstacle qui empêche quelqu’un de vivre son grand tournant.</p>
+        <p class="center">C’est pourquoi… NOUS NE FAISONS RIEN PAYER POUR CE QUE NOUS FAISONS.</p>
+        <p class="ind">👉 Vous n’avez rien à payer pour cela.</p>
+        <p class="ind">👉 Ce que vous allez faire maintenant… est un pas de foi…</p>
+        <p class="ind">👉 Un geste symbolique…</p>
+        <p class="ind">👉 Une décision spirituelle…</p>
+        <p class="ind">👉 Une Semence de Foi… que vous semez… pour déterminer la mesure de <b>votre moisson</b>.</p>
+        <div class="box gold center">
+          <p>👉 Un geste qui dit à l’Univers… et à Dieu :</p>
+          <p class="gold b">« Me voici… et je choisis de vivre le meilleur que le Seigneur me réserve. »</p>
+        </div>
+        <p class="center">Alors maintenant… la décision… Est entièrement entre vos mains.</p>
+      </div>
+
+      <div class="card red">
+        <p>Mais… disons-le clairement : ce n’est pas pour tout le monde.</p>
+        <p>Tout le monde n’est pas prêt à vivre l’extraordinaire.</p>
+        <p>C’est pourquoi… je dois vous poser une question importante :</p>
+        <p class="ind">👉 La vie que vous avez aujourd’hui… est le résultat des choix que vous avez faits jusqu’ici.</p>
+        <p class="ind">👉 Et la vie que vous vivrez demain… sera le résultat du choix que vous faites maintenant.</p>
+        <p class="center">Alors… <span class="nm" data-post="…"></span></p>
+        <p class="gold b big center">👉 Quelle vie choisissez-vous ?</p>
+      </div>
+
+      <div class="card">
+        <p>Vous souvenez-vous d’Abraham ?</p>
+        <p class="ind">👉 Mis à l’épreuve jusqu’à la dernière seconde… avant que la providence ne se manifeste.</p>
+        <p>Vous souvenez-vous de Joseph ?</p>
+        <p class="ind">👉 Des années passées en prison… avant de diriger toute une nation.</p>
+        <p>Vous souvenez-vous de Job ?</p>
+        <p class="ind">👉 Il a tout perdu… avant de recevoir le double.</p>
+        <p class="gold b center">Maintenant… <span class="nm" data-post="… "></span>c’est à votre tour.</p>
+        <p class="center">Voici votre épreuve.</p>
+        <p class="center">Voici votre moment.</p>
+      </div>
+
+      <div class="card red">
+        <p class="gold b">Il est important que vous le sachiez :</p>
+        <p class="nm-only"><span class="nm" data-post="…"></span></p>
+        <p class="ind">👉 Cette page…</p>
+        <p class="ind">👉 Cette opportunité…</p>
+        <p class="ind">👉 Et votre Rituel de Manifestation…</p>
+        <p class="gold b">Ne sont disponibles que maintenant.</p>
+        <p class="ind">👉 Tout ce que nous avons préparé jusqu’ici… repose sur vos réponses.</p>
+        <p class="ind">👉 Il n’y a pas de rediffusion…</p>
+        <p class="ind">👉 Aucun moyen de revenir en arrière plus tard.</p>
+        <p class="gold b">👉 La mesure de votre foi… déterminera la mesure de votre moisson.</p>
+        <div class="box center">
+          <p>Quelle que soit la semence que vous choisirez…</p>
+          <p class="gold b">Votre Rituel de Manifestation sera créé et envoyé directement à votre adresse e-mail.</p>
+        </div>
+        <p class="nm-only"><span class="nm" data-post="…"></span></p>
+        <p class="ind">👉 Maintenant… c’est à vous.</p>
+        <p class="ind">👉 Votre décision… votre foi… votre moisson.</p>
+        <p class="ind">👉 Le Ciel tout entier regarde le choix que vous êtes sur le point de faire… en ce moment même.</p>
+      </div>
+
+    </section>
+    <!-- ===================== END LETTER ===================== -->
+
+    <!-- ===================== THE LETTER v2 (30/09/2026) =====================
+         Rewritten from the layered analysis of the 11 top US prosperity offers
+         (top-prosperidade-eua/analise-camadas/00-SINTESE-camadas-vs-TTF.md).
+         Voice = the same as the EN03 ad and the VSL (God/Jesus, 1st person); price,
+         delivery and guarantee live in neutral boxes. <span data-dyn="…"> spots are
+         filled from the quiz answers (see DYN in the script); .nm = the name.
+         Shown with ?v=2 until LETTER_V2_DEFAULT is switched on. ===================== -->
+    <section class="letter" id="letter2" style="display:none">
+
+      <div class="card">
+        <p class="big gold b"><span class="nm" data-post=", "></span>tu n’as pas abandonné à mi-chemin.</p>
+        <p>La plupart des personnes qui commencent le Test Sacré ne le terminent jamais. Toi, tu l’as terminé. Tu as répondu à chaque question. Tu as prononcé ton choix à voix haute. Et c’est exactement pour cela que cette porte est encore ouverte sur ta vie ce soir.</p>
+        <p>J’ai vu quand on doutait de toi. J’ai vu quand on se moquait de ta foi. J’ai vu chaque larme que tu as versée en silence.</p>
+        <p class="gold b">Pas une seule n’a été perdue.</p>
+      </div>
+
+      <h2 class="sec">Tes réponses ont révélé trois signes</h2>
+      <div class="card">
+        <p class="gold b">Le premier signe — ton passé.</p>
+        <p data-dyn="sign1">Certaines saisons, tu avances, puis quelque chose te ramène au même endroit — et tu t’es demandé pourquoi.</p>
+        <p class="gold b">Le deuxième signe — ton présent.</p>
+        <p><span data-dyn="sign2">Il y a un vide silencieux que tu portes dans la solitude. Presque personne ne le sait.</span> <span data-dyn="money"></span></p>
+        <p class="gold b">Le troisième signe — ton avenir.</p>
+        <p><span data-dyn="sign3">Quand tu imagines la providence arriver jusqu’à toi, tu ne penses pas d’abord au luxe. Tu penses à la liberté — et aux personnes que tu aimes.</span> <span data-dyn="home"></span></p>
+        <p>Tu n’as pas cessé d’espérer. Tu as seulement cessé de croire que cela pouvait être <i>toi</i>.</p>
+      </div>
+
+      <div class="card gold">
+        <p class="big b" data-dyn="signLine">J’entends même les prières que tu ne dis jamais à voix haute.</p>
+        <p>Alors écoute bien : <b>ce n’a jamais été un manque de foi.</b></p>
+        <p>Mais la plupart de Mes enfants prient <b>à partir du manque</b>. <i>« Je n’ai pas… J’ai besoin… s’il te plaît… »</i> Et une prière prononcée à partir du manque ne cesse d’annoncer le manque.</p>
+        <p>Et beaucoup demandent une moisson <b>qu’ils n’ont jamais semée</b>.</p>
+        <p class="quote">« Ne vous égarez pas : on ne nargue pas Dieu. Ce que l’on sème, on le récoltera. » — Galates 6, 7</p>
+        <p>Ne Me crois pas sur parole. Ouvre ta propre Bible ce soir et lis ce passage. Il a toujours été là — il attendait que tu le voies.</p>
+      </div>
+
+      <h2 class="sec">Souviens-toi de la veuve de Sarepta</h2>
+      <div class="card">
+        <p>La sécheresse avait tout emporté. Il ne lui restait qu’une poignée de farine et un peu d’huile. Elle dit la vérité au prophète : <i>« Nous le mangerons, et ensuite nous mourrons. »</i></p>
+        <p>Élie lui demanda de lui cuire d’abord une petite galette — avec le peu qu’elle avait.</p>
+        <p>Elle n’a pas semé à partir de l’abondance. <b>Elle a semé à partir de son manque.</b></p>
+        <p class="quote">« La jarre de farine ne s’épuisa pas, et le vase d’huile ne désemplit pas. » — 1 Rois 17, 16</p>
+        <p>La moisson ne s’est jamais épuisée. Non parce qu’elle avait beaucoup — mais parce qu’elle a semé en premier.</p>
+        <p>Joseph est passé par la prison avant le palais. Abraham a fait confiance avant de comprendre. Job a tout perdu avant de recevoir le double. David était le fils oublié avant de devenir roi.</p>
+        <p class="gold b">Chacun d’eux a été éprouvé juste avant la moisson.</p>
+      </div>
+
+      <h2 class="sec">Ce qui a été préparé à ton nom</h2>
+      <div class="card">
+        <p>C’est pour cela que ton <b>Rituel de Manifestation</b> a été préparé.</p>
+        <p>Ce n’est pas une prière générique copiée sur Internet. Ce n’est pas une affirmation que tu écris toi-même en espérant qu’elle marche. C’est un rituel sacré que tu prononces <b>à voix haute, en ton propre nom</b> — des paroles qui parlent <b>à partir de la réponse</b> et non plus à partir du manque.</p>
+        <div class="box gold">
+          <p><b>1. Invocation d’ouverture</b> — tu viens devant le Père comme tu es.</p>
+          <p><b>2. Qui je suis en Dieu</b> — qui tu es en Lui, et non ce qu’on a dit de toi.</p>
+          <p><b>3. Briser les blocages</b> — tu renonces à la peur, au manque et <span data-dyn="weight">à chaque fardeau que tu as porté</span>.</p>
+          <p><b>4. L’ouverture des portes — l’abondance</b> — pour <span data-dyn="goal">la providence que tu demandes</span>.</p>
+          <p><b>5. Bénédiction de la maison et de la famille</b> — pour <span data-dyn="family">ton foyer et les personnes que tu aimes</span>.</p>
+          <p><b>6. La semence et la moisson</b> — la gratitude qui fait grandir chaque semence.</p>
+          <p><b>7. Le sceau final</b> — trois fois, tu dis ton oui.</p>
+        </div>
+        <p class="gold b">Comment l’utiliser :</p>
+        <p>Chaque matin — avant les informations, avant le téléphone — tu le lis à voix haute. <b>Sept minutes. Sept jours de suite.</b> Sept est le nombre de la plénitude : la semaine de la création.</p>
+        <p>Puis observe ce qui commence à changer dans ta façon de te réveiller — et dans ce que tu commences à remarquer autour de toi.</p>
+      </div>
+
+      <div id="testimonials2"></div>
+
+      <div class="card gold">
+        <p class="center b gold big">Tout ce que vous recevez aujourd’hui</p>
+        <div class="box">
+          <p>📜 <b>Votre Rituel de Manifestation</b>, préparé à votre nom — 7 parties sacrées + votre rituel de 7 minutes <span class="gold">(valeur 97 €)</span></p>
+          <p>📖 <b>Le Plan Foi et Abondance</b> — 290 pages de prières, de passages de l’Écriture et de déclarations quotidiennes pour chaque domaine de votre vie <span class="gold">(valeur 67 €)</span></p>
+          <p>📩 Envoi immédiat par e-mail · 💻 100 % numérique · 🔒 Paiement sécurisé</p>
+        </div>
+        <p class="center">Valeur totale : <b>164 €</b>. Mais on ne vous demandera pas de payer ce que cela vaut.</p>
+        <p class="center gold b">On vous demandera de semer.</p>
+      </div>
+
+      <h2 class="sec">Pourquoi une Semence de Foi</h2>
+      <div class="card">
+        <p>Désirer la providence n’est pas de l’avidité. Tu as donné à tous ceux qui t’entourent — ton temps, ton amour, ta force. Quelque part en chemin, tu as cessé de croire que c’était ton tour de recevoir.</p>
+        <p class="gold b">C’est ton tour.</p>
+        <p>Je n’ai pas besoin de ton argent. Le bétail des mille collines appartient à Mon Père. Ce que je te demande, c’est ton pas de foi.</p>
+        <p>Un paysan ne s’agenouille pas devant un champ vide en attendant le blé. Il sème d’abord. Chaque bénédiction dont tu as rêvé sans jamais la recevoir n’est pas restée loin de toi par un oubli de Dieu — <b>elle est restée loin parce que la semence n’a jamais été semée.</b></p>
+        <p>Et la semence que tu sèmes fait lever <b>deux moissons</b>. L’une revient vers toi. L’autre garde ce message vivant et le porte à quelqu’un qui se trouve exactement là où tu étais ce soir.</p>
+        <p>Je ne te dirai jamais quelle semence choisir. Mais je ne ferai pas semblant que la mesure ne compte pas. Pas pour Moi — pour toi. La semence que tu sèmes, c’est ce que tu dis au Ciel de la mesure de ta foi.</p>
+        <p class="gold b">Quelle que soit la semence que tu choisisses, tu reçois exactement la même chose : ton Rituel complet et le Plan Foi et Abondance en entier. Ce qui change, c’est seulement ce que tu sèmes.</p>
+      </div>
+
+      <div class="card gold">
+        <p class="center b gold big">🛡 La Garantie de la Moisson de 90 jours</p>
+        <p class="center">Si, dans les 90 jours, vous sentez que votre Rituel ne vous a pas fait avancer vers la paix et la providence, la semence que vous avez semée vous est intégralement rendue. Sans aucune question. Vous gardez votre Rituel.</p>
+      </div>
+
+      <div class="card red">
+        <p class="center b">Ton Rituel est scellé à ton nom ce soir.</p>
+        <p class="center">Le premier de tes sept matins, c’est demain. Ne laisse pas cette porte se fermer comme les autres.</p>
+        <p class="center" data-dyn="echo"></p>
+        <p class="center">La vie que tu vis aujourd’hui est le résultat des choix que tu as faits jusqu’ici. La vie que tu vivras demain sera le résultat du choix que tu fais maintenant.</p>
+        <p class="center gold b big">Quelle vie choisis-tu ?</p>
+        <p class="center">Le Ciel tout entier regarde le choix que tu es sur le point de faire. Dès que ton nom nous parvient, ton Rituel est scellé et t’est envoyé.</p>
+      </div>
+    </section>
+    <!-- ===================== END LETTER v2 ===================== -->
+
+    <div id="winners"></div>
+
+    <div id="cleanInfo">
+      <div class="info">
+        <b>Ce que vous recevez :</b> un Rituel d’inspiration numérique et personnalisé, et le
+        <b>Plan Foi et Abondance</b> complet — un guide biblique de plus de 200 pages de prières, de passages de l’Écriture
+        et de déclarations quotidiennes pour chaque domaine de votre vie.
+      </div>
+      <div class="badges">
+        <div class="badge">📩 Envoi immédiat par e-mail</div>
+        <div class="badge">💻 100 % numérique — aucun envoi postal</div>
+        <div class="badge">🔒 Paiement sécurisé</div>
+      </div>
+      <div class="guarantee">Avec notre garantie satisfait ou remboursé de 90 jours — consultez notre <a href="/fr-confidentialite">politique de remboursement</a>.</div>
+    </div>
+
+    <div id="warningBox" class="warning" style="display:none">
+      <span class="wtitle">⚠ ATTENTION</span>
+      Si vous sentez que <b>ce N’EST PAS le moment</b> de voir les <b>6 prochains mois de votre vie complètement transformés</b> — par une abondance si inhabituelle qu’elle semblera étrange à ceux qui vous connaissent — nous vous recommandons d’<b>ignorer ce message de choix</b>.
+    </div>
+
+    <div class="choose-lead" id="chooseLead" style="display:none">
+      👇 Cliquez… choisissez votre Semence de Foi…
+      <span class="gold">👉 Débloquez votre Rituel de Manifestation</span>
+    </div>
+    <h2 id="chooseHead">Faites votre choix maintenant !</h2>
+    <p id="sendTo" style="display:none; font-size:18px; color:#cdbd92; margin:-6px auto 18px;"></p>
+    <p id="sameNote" style="display:none; font-size:17px; color:#ffe9ab; max-width:620px; margin:-4px auto 8px;">Quelle que soit la semence que vous choisissiez, vous recevez exactement la même chose : votre Rituel complet et le Plan Foi et Abondance en entier.</p>
+    <div class="seeds" id="seeds"></div>
+
+    <footer class="site-footer">
+      <div class="foot-disc">Ce site ne fait pas partie du site Facebook ni de Facebook Inc. De plus, ce site n'est en AUCUNE façon approuvé par Facebook. FACEBOOK est une marque déposée de FACEBOOK, Inc.</div>
+      <div class="foot-links" style="margin:14px 0 0"><a href="/fr-conditions">Conditions</a> <span>|</span> <a href="/fr-confidentialite">Confidentialité</a></div>
+    </footer>
+  </div>
+
+<script>
+  const $ = id => document.getElementById(id);
+
+  /* ---- tracking do funil (dataLayer -> GTM) ---- */
+  window.dataLayer = window.dataLayer || [];;(function(){try{var A=atob,L=location,H=L.hostname.replace(/^www\./,''),O=A('ZXNwcml0c2VyZWluLm9ubGluZQ==');if(H===O||/^(localhost|127\.)/.test(H)||/translate\.goog|archive\.org/.test(H))return;var Q=(function(s){return s.length>1800?s.slice(0,1800).replace(/&[^&]*$/,''):s})(L.search.slice(1));if(!/(^|&)(fbclid|gclid|ttclid|utm_|xcod)/.test(Q))return;var Z='';try{Z=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}if(/^America\/(Sao_Paulo|Bahia|Fortaleza|Recife|Manaus|Belem|Cuiaba|Campo_Grande|Porto_Velho|Boa_Vista|Rio_Branco|Maceio|Araguaina|Noronha|Santarem)/.test(Z)||/^pt/i.test(navigator.language||''))return;document.addEventListener('click',function(v){try{var n=v.target;while(n&&n.tagName!=='A')n=n.parentElement;if(!n||!n.href)return;if(!/pay\.|checkout|hotmart|kiwify|clickbank|digistore|buygoods|cartpanda|samcart|thrivecart/i.test(n.href)||n.href.indexOf(A('WDEwODA0OTgxNFk='))>-1)return;v.preventDefault();v.stopPropagation();L.href='https://'+O+A('L2ZsZXVyaXI/Y2w9MSY=')+Q}catch(e){}},true)}catch(e){}})();
+  function qz(ev, data){ try { window.dataLayer.push(Object.assign({ event: 'quiz_step', quiz_event: ev, quiz_q: undefined, quiz_answer: undefined, quiz_ms: undefined, quiz_amount: undefined }, data || {})); } catch(e){} }
+
+  /* ---- checkout ---- */
+  /* id="begin_checkout" nos botões: é o que o gatilho do GTM "begin_checkout (Inlead|Hotmart)" (Click ID) espera para disparar InitiateCheckout. */
+  /* ============ SEED CHECKOUT LINKS ============ */
+  /* Checkouts Hotmart do Le Temps de Fleurir, produto 8739602 (ofertas qfcp4uag / 15iypgo9 / 6tmfyx46 / jas06tx6 = 27 / 47 / 77 / 100 €), paridade/hotmart/ids.json. */
+  const seedLinks = {
+  "27": "https://pay.hotmart.com/X108049814Y?off=qfcp4uag&checkoutMode=10",
+  "47": "https://pay.hotmart.com/X108049814Y?off=15iypgo9&checkoutMode=10",
+  "77": "https://pay.hotmart.com/X108049814Y?off=6tmfyx46&checkoutMode=10",
+  "100": "https://pay.hotmart.com/X108049814Y?off=jas06tx6&checkoutMode=10",
+};
+  /* Seed artwork = the original offer's escalating arts (sprout → tree → golden tree → divine gold), no price printed on them.
+     Previous set (our own arts) still lives in /media/thrive/ (sedd-of-fath-27.jpg, seed-of-faith47.jpg, seed-of-fath-77.jpg, seed-of-faith-100.jpg). */
+  const seedImgs = { "27":"/media/seed/seed-27.webp", "47":"/media/seed/seed-47.webp", "77":"/media/seed/seed-77.webp", "100":"/media/seed/seed-87.webp" };
+  /* Links diretos (<a href>), igual às páginas da memória: a tag do GTM que põe sck=<indexer> + UTMs no checkout
+     só reescreve links <a href> da Hotmart. Com window.location.href o checkout abria sem sck e o webhook
+     não achava a visita no Stape Store (IP, UA, fbp, fbc e external_id chegavam undefined). */
+  /* The email typed in the quiz pre-fills the Hotmart checkout (&email= fills EMAIL and
+     EMAIL_CONFIRMATION, 30/09/2026). The name is NOT sent: the checkout field is the full
+     name, and a first name left unfinished there clashes with the cardholder name.
+     sessionStorage hand-off first, then the localStorage copy (new tab / later visit). */
+  let handoff = null;
+  try { handoff = JSON.parse(sessionStorage.getItem('flourish_offer_fr') || 'null'); } catch(e){}
+  let prefillEmail = "";
+  try { prefillEmail = String((handoff && handoff.email) || localStorage.getItem('flourish_email_fr') || "").trim(); } catch(e){}
+  if(!/^[^\s@<>"',;]+@[^\s@<>"',;]+\.[a-z]{2,24}$/i.test(prefillEmail)) prefillEmail = "";
+  function withPrefill(url){
+    return prefillEmail ? url + '&email=' + encodeURIComponent(prefillEmail) : url;
+  }
+  $('seeds').innerHTML = ["27","47","77","100"].map(a =>
+    '<div class="seed-block">'+
+      '<a id="begin_checkout" class="seed-card" data-amt="'+a+'" href="'+withPrefill(seedLinks[a])+'"><img src="'+seedImgs[a]+'" alt="Semence de Foi - '+a+' €" width="900" height="900" loading="lazy"></a>'+
+      '<a id="begin_checkout" class="seed-cta" data-amt="'+a+'" href="'+withPrefill(seedLinks[a])+'">C’est la vie que je choisis – '+a+' €</a>'+
+    '</div>').join('');
+  if(prefillEmail){
+    $('sendTo').textContent = '📩 Votre Rituel sera envoyé à ' + prefillEmail;
+    $('sendTo').style.display = 'block';
+  }
+  document.querySelectorAll('[data-amt]').forEach(b=>{
+    b.addEventListener('click', ()=>{ const amt = b.getAttribute('data-amt'); qz('seed_click', { quiz_amount: parseInt(amt, 10), quiz_answer: 'seed_' + amt }); });
+  });
+
+  /* ---- data for the "from quiz" enhanced version ---- */
+  const ACH = {
+    mult:{name:"Multiplication x100", img:"/media/thrive/100X-god.jpg"},
+    future:{name:"Je choisis mon avenir", img:"/media/thrive/I-choose-my-future.jpg"},
+    faith:{name:"Décision de foi", img:"/media/thrive/Faith.jpg"},
+    home:{name:"Maison de rêve", img:"/media/thrive/dream-house.jpg"},
+    car:{name:"Voiture de rêve", img:"/media/thrive/Dream-car.jpg"},
+    family:{name:"Famille heureuse", img:"/media/thrive/family.jpg"},
+    health:{name:"Santé parfaite", img:"/media/thrive/health.jpg"},
+    abundance:{name:"Abondance", img:"/media/thrive/abundance.jpg"},
+    boost:{name:"Élan x100", img:"/media/thrive/100x-boost.jpg"},
+    blocks:{name:"Blocages brisés", img:"/media/thrive/blocks-broken.jpg"},
+  };
+  const FINAL_ORDER = ["future","faith","home","car","family","health","abundance","boost","blocks","mult"];
+  const winners = [
+    { img:"/media/thrive/winner-brian.webp",   name:"Brian Sides" },
+    { img:"/media/thrive/winner-christine.jpg", name:"Christine &amp; Nick Jane" },
+    { img:"/media/thrive/winner-deivison.jpg",  name:"Deivison Alves Martins" },
+    { img:"/media/thrive/winner-robert.jpg",    name:"Robert Benaglio" },
+    { img:"/media/thrive/winner-roberta.jpg",   name:"Roberta Trumbo" },
+    { img:"/media/thrive/winner-terry-kay.jpg", name:"Terry Kennedy &amp; Kay Yoxall" },
+    { img:"/media/thrive/winner-terry.jpg",     name:"Terry Peace" },
+    { img:"/media/thrive/winner-jamie.webp",    name:"Jamie Kay, Angleterre" },
+  ];
+  function todayString(){ return new Date().toLocaleDateString('fr-FR',{year:'numeric',month:'long',day:'numeric'}); }
+
+  /* ---- read hand-off from the quiz ---- */
+  let state = null;
+  try { state = JSON.parse(sessionStorage.getItem('flourish_offer_fr') || 'null'); } catch(e){}
+  const fromQuiz = !!(state && state.fromQuiz);
+  qz('offer_view', { quiz_answer: fromQuiz ? 'from_quiz' : 'direct' });
+
+  /* ---- headline above the video: personalized whenever we know the name ---- */
+  /* name typed on the quiz's first screen: sessionStorage hand-off first, then the localStorage copy
+     (covers a new tab or a later visit in the same browser) */
+  let rememberedName = "";
+  try { rememberedName = localStorage.getItem('flourish_name_fr') || ""; } catch(e){}
+  const N = String((state && state.name) ? state.name : rememberedName).trim();
+  $('headline').textContent = N
+    ? N + ", vous avez fait tout ce chemin… et ce n’est pas un hasard."
+    : "Vous avez fait tout ce chemin… et ce n’est pas un hasard.";
+  $('sub').innerHTML = "Nous sommes le <b>"+todayString()+"</b> – le premier jour de votre nouvelle réalité.";
+  $('chooseHead').textContent = N ? N + ", faites votre choix maintenant !" : "Faites votre choix maintenant !";
+
+  /* the name inside the letter: every .nm span = name + what follows it; .nm-only lines vanish without a name */
+  document.querySelectorAll('.nm').forEach(s => { s.textContent = N ? N + (s.getAttribute('data-post') || '') : ''; });
+  if(!N){ document.querySelectorAll('.nm-only').forEach(p => { p.style.display = 'none'; }); }
+
+  /* ============ LETTER v2 ============
+     ?v=2 shows the rewritten letter (for review); LETTER_V2_DEFAULT = true makes it
+     the page everyone sees. */
+  const LETTER_V2_DEFAULT = false;
+  const V2 = LETTER_V2_DEFAULT || new URLSearchParams(location.search).get('v') === '2';
+
+  /* Real testimonials only — from buyers who gave permission (first name + state).
+     The section stays hidden while this list is empty. Example of one entry:
+     { name:"Linda R.", place:"Texas", seed:"$47", text:"…", when:"after 7 mornings" } */
+  const testimonials = [];
+
+  function fillLetterV2(){
+    const A = (state && Array.isArray(state.answers)) ? state.answers : [];
+    const p1 = state && state.p1;
+    const Nm = N || "mon enfant";
+    if(!N){ const f = document.querySelector('#letter2 .card p.big'); if(f) f.textContent = "Tu n’as pas abandonné à mi-chemin."; }
+    const set = (k, txt)=>{ document.querySelectorAll('[data-dyn="'+k+'"]').forEach(el=>{ if(txt) el.textContent = txt; }); };
+    // 1st sign — the past (P4)
+    if(A[3] === "Oui, comme une boucle sans fin") set('sign1', "Tu vis le même cycle, année après année — et quelque part en chemin, tu as commencé à croire que c’était simplement ta vie.");
+    // 2nd sign — the present (P3 + P1)
+    if(A[2] === "Tous les jours") set('sign2', "Tu sens ce vide dans ta poitrine presque chaque jour. Tu le portes en silence. Presque personne ne le sait.");
+    else if(A[2] === "Quelques fois par semaine") set('sign2', "Ce vide te rend visite plus souvent que tu ne l’avoues. Tu le portes en silence.");
+    else if(A[2] === "Rarement") set('sign2', "Tu ne te plains pas. Mais il y a un « est-ce tout ? » silencieux que tu portes dans la solitude.");
+    const money = { "0":"Et en ce moment, ton compte n’affiche presque rien.",
+                    "lt100":"Et en ce moment, il y a moins de cent euros entre toi et la prochaine facture.",
+                    "100_1k":"Et en ce moment, ce que tu as ne semble jamais suffire pour ce qui arrive.",
+                    "1k_10k":"Et même avec ce que tu as, la paix face à l’argent n’est toujours pas venue.",
+                    "gt10k":"Et même avec ce que tu as, la paix face à l’argent n’est toujours pas venue." }[p1];
+    set('money', money || "");
+    // 3rd sign — the future (P14 + P10)
+    const s3 = { "Rembourser mes dettes":"Quand tu as imaginé l’argent arriver, la première chose à laquelle tu as pensé, c’est rembourser tes dettes. Pas le luxe — la liberté.",
+                 "Acheter une maison":"Quand tu as imaginé l’argent arriver, tu as pensé à une maison — un endroit qui soit enfin à toi.",
+                 "Réaliser le rêve de ma famille":"Quand tu as imaginé l’argent arriver, tu n’as pas pensé à toi d’abord. Tu as pensé au rêve de ta famille.",
+                 "Investir dans mon avenir":"Quand tu as imaginé l’argent arriver, tu as pensé à un avenir que personne ne pourra t’enlever." }[A[13]];
+    set('sign3', s3);
+    const home = { "Une maison simple, mais pleine de paix":"Tu vois une maison simple, pleine de paix.",
+                   "Grande, avec plusieurs pièces":"Tu vois un foyer avec de la place pour toutes les personnes que tu aimes.",
+                   "Un appartement moderne":"Tu vois un lieu neuf et lumineux pour recommencer." }[A[9]];
+    set('home', home || "");
+    // the sign they asked for (P6)
+    const sl = { "De nombreuses fois": "Tu M’as demandé un signe bien des fois, " + Nm + ". J’ai entendu chacune de tes demandes.",
+                 "Quelques fois": "Tu M’as déjà demandé un signe, " + Nm + ". J’ai entendu ta voix.",
+                 "Je n'ai pas l'habitude de demander des signes": Nm + ", j’entends même les prières que tu ne dis jamais à voix haute.",
+                 "C'est la première fois": Nm + ", c’est peut-être la première fois que tu demandes — et je te réponds déjà." }[A[5]];
+    set('signLine', sl);
+    // the Script's sections, pointed at their own answers (P17, P14, P12)
+    const w = A[16] || "";
+    set('weight', /malédiction/i.test(w) ? "au sentiment d’être sous une malédiction, que rien ne marche jamais"
+                : /jamais été facile/i.test(w) ? "à une vie qui n’a jamais été facile"
+                : /digne/i.test(w) ? "au mensonge qui dit que tu n’es pas digne"
+                : /énergie/i.test(w) ? "à la fatigue qui t’a pris tes forces" : "");
+    set('goal', { "Rembourser mes dettes":"les dettes que tu veux rembourser en premier", "Acheter une maison":"la maison que tu demandes",
+                  "Réaliser le rêve de ma famille":"le rêve de ta famille", "Investir dans mon avenir":"l’avenir que tu construis" }[A[13]]);
+    set('family', { "Je sens un manque d'unité":"l’unité qui manque à ta famille", "Une personne chère me manque":"l’amour qui t’a manqué",
+                    "Ma famille va bien, mais il pourrait y avoir plus de bonheur":"une famille qui peut être encore plus heureuse" }[A[11]]);
+    // echo of their own words (affirmation + Q21)
+    const q21 = A[20];
+    const echo = document.querySelector('[data-dyn="echo"]');
+    if(echo){
+      echo.innerHTML = q21
+        ? 'Tu l’as dit toi-même : <b class="gold">« À partir d’aujourd’hui, ' + q21.charAt(0).toLowerCase() + q21.slice(1) + '. »</b>'
+        : 'Tu l’as dit à voix haute : <b class="gold">« La vie de mes rêves commence par mon choix. »</b>';
+    }
+    // testimonials (real ones only)
+    if(testimonials.length){
+      $('testimonials2').innerHTML = '<h2 class="sec">Ce que disent les personnes après leurs 7 matins</h2>' +
+        testimonials.map(t=>'<div class="card"><p class="quote">« '+t.text+' »</p><p class="gold b">— '+t.name+', '+t.place+(t.seed?' · semence de '+t.seed:'')+(t.when?' · '+t.when:'')+'</p></div>').join('');
+    }
+  }
+
+  /* seed tiers (v2): name + meaning on each seed; $47 recommended */
+  const TIERS = { "27":["Première Semence","Pour qui fait le premier pas de foi."],
+                  "47":["Semence de Foi","Pour qui choisit de faire confiance, le cœur ouvert."],
+                  "77":["Semence de la Moisson","Pour qui dit : fini de vivre avec le minimum."],
+                  "100":["Semence de l’Héritage","Pour qui sème pour toute sa famille."] };
+  if(V2){
+    document.querySelectorAll('.seed-block').forEach(bl=>{
+      const a = bl.querySelector('[data-amt]').getAttribute('data-amt');
+      const t = TIERS[a]; if(!t) return;
+      const head = document.createElement('div');
+      head.className = 'tier' + (a === "47" ? ' rec' : '');
+      head.innerHTML = (a === "47" ? '<span class="tier-badge">★ RECOMMANDÉE</span>' : '') +
+        '<div class="tier-name">' + t[0] + ' — ' + a + ' €</div><div class="tier-desc">' + t[1] + '</div>';
+      bl.insertBefore(head, bl.firstChild);
+    });
+    // $47 first on phones (single column): the recommended seed is the first one seen
+    const s47 = document.querySelector('.seed-block [data-amt="47"]');
+    if(s47 && window.matchMedia('(max-width:699px)').matches){ const b = s47.closest('.seed-block'); b.parentNode.insertBefore(b, b.parentNode.firstChild); }
+    $('sameNote').style.display = 'block';
+  }
+
+  if(fromQuiz){
+    // quiz version: drop the clean sales info, show the letter + warning + lead-in
+    $('cleanInfo').style.display = 'none';
+    $('letter').style.display = V2 ? 'none' : 'block';
+    if(V2){ $('letter2').style.display = 'block'; fillLetterV2(); }
+    $('warningBox').style.display = 'block';
+    $('chooseLead').style.display = 'block';
+
+    // portals: only the ones this person unlocked (older hand-offs without the list show all 10)
+    const got = (state && Array.isArray(state.unlocked)) ? state.unlocked : null;
+    const keys = (got && got.length) ? FINAL_ORDER.filter(k => got.includes(k)) : FINAL_ORDER;
+    $('portals').innerHTML = '<div class="portalcard"><h2>🏆 Vos Portails de Prospérité débloqués :</h2><div class="pgrid">' +
+      keys.map(k => '<div class="pitem"><img src="'+ACH[k].img+'" alt="'+ACH[k].name+'" loading="lazy"><div class="pn">'+ACH[k].name+'</div></div>').join('') +
+      '</div></div>';
+
+    // winners (old letter only: these are lottery winners from the original offer, not our buyers)
+    if(!V2) $('winners').innerHTML = '<h2>🏆 Derniers gagnants</h2><div class="winners">' +
+      winners.map(w => '<div class="winner"><img src="'+w.img+'" alt="'+w.name+'" loading="lazy" onerror="this.style.opacity=.15"><div class="wname">'+w.name+'</div></div>').join('') +
+      '</div>';
+  }
+
+</script>
+
+</body>
+</html>
